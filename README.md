@@ -5,3 +5,11 @@ O retorno da aplicação node.js para o nginx deverá ser:
 <h1>Full Cycle Rocks!</h1>
 
 - Lista de nomes cadastrada no banco de dados.
+
+Tudo deverá estar funcionando e disponível na porta: 8080.
+
+git clone https://github.com/rhraRodrigo/desafio-node-fullcycle-docker.git
+
+cd desafio-node-fullcycle-docker
+
+docker-compose up -d
