@@ -15,7 +15,7 @@ services:
   
   node:
     build:
-      context: node
+      context: ./node
     container_name: node
     volumes:
       - ./node:/usr/src/app
