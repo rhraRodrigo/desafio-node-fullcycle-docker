@@ -2,8 +2,7 @@ version: '3.1'
 
 services:
   nginx:
-    build:
-      context: ./nginx
+    image: rhrarodrigo/desafio-fullcycle-docker-nginx:latest
     container_name: nginx
     restart: always
     ports: 
@@ -14,25 +13,19 @@ services:
       - default-network
   
   node:
-    build:
-      context: ./node
+    image: rhrarodrigo/desafio-fullcycle-docker-node:latest
     container_name: node
-    volumes:
-      - ./node:/usr/src/app
     ports: 
       - "3000:3000"
-    tty: true
     depends_on:
       - db
     networks:
       - default-network
 
   db:
-    build: 
-      context: ./mysql
+    image: rhrarodrigo/desafio-fullcycle-docker-mysql:latest
     container_name: db
     restart: always
-    tty: true
     networks:
       - default-network
     volumes:
