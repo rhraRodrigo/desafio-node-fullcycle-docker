@@ -7,6 +7,10 @@ services:
     container_name: nginx
     restart: always
     ports: 
+      - '8080:80'
+    depends_on:
+      - node
+    networks:
       - default-network
 
   node:
