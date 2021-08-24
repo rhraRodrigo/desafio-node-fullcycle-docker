@@ -18,7 +18,7 @@ services:
       context: ./node
     container_name: node
     volumes:
-      - ./node:/usr/src/app
+      - /usr/src/app
     ports: 
       - "3000:3000"
     tty: true
